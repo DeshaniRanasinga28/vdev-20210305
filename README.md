@@ -35,3 +35,25 @@ Follow the following instructions to set up a Flutter development environment fo
  - Operating Systems: macOS (64-bit)
  - Disk Space: 2.8 GB (does not include disk space for IDE/tools)
  - Tools: Flutter uses git for installation and upgrade. Installing Xcode and Android Studio
+
+## Get the Flutter SDK
+Step 1 - Go to the following link and download the latest stable release of the Flutter SDK:
+
+     https://flutter.dev/docs/get-started/install/macos
+     
+Step 2 - Create the development folders and Extract the download file uisng following commands:
+
+     ` ~$ cd ~/development `
+     
+     ` ~$ unzip ~/Downloads/flutter_macos_2.0.1-stable.zip `
+     
+Step 3 - Add the flutter tool to your path using following commands:
+
+This command helps to sets PATH variable for the current terminal window. To permanently add Flutter to your path follow the following option step. 
+
+     ` ~$ export PATH="$PATH:`pwd`/flutter/bin" `
+     
+     
+  
+     
+     
