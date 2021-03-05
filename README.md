@@ -14,7 +14,6 @@
 
      ` ~$ git commit -m "Empty project with README" `
      
-     ` ~$ git branch -M main `
      
 
 # GitHub project
@@ -24,6 +23,8 @@
      ` ~$ git remote add origin https://github.com/DeshaniRanasinga28/vdev-20210305.git `
       
  5. Using the terminal, push the commits in your local repo to the remote repo on GitHub.
+ 
+     ` ~$ git branch -M main `
 
      ` ~$ git push -u origin main `
      
