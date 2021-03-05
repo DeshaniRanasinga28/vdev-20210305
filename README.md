@@ -49,9 +49,33 @@ Step 2 - Create the development folders and Extract the download file uisng foll
      
 Step 3 - Add the flutter tool to your path using following commands:
 
-This command helps to sets PATH variable for the current terminal window. To permanently add Flutter to your path follow the following option step. 
+This command helps to sets PATH variable for the current terminal window. To permanently add Flutter to your path follow the following optional step. 
 
      ` ~$ export PATH="$PATH:`pwd`/flutter/bin" `
+     
+### Optional Step
+
+Optional Step 1 - Open new Terminal and type the following commands:
+It helps to open your " .bash_profile " file in your computer
+
+     ` ~$ open -e .bash_profile `
+     
+Optional Step 2 - Add folowing line inside the .bash_profile file:
+
+     ` export PATH="$PATH:[PATH_TO_FLUTTER_GIT_DIRECTORY]/flutter/bin" `
+     
+     
+Step 4 - Run the following command to see if there are any dependencies you need to install to complete the setup.
+
+     ` ~$ flutter doctor `
+     
+     
+
+     
+
+     
+
+
      
      
   
