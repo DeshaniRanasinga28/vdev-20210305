@@ -96,6 +96,24 @@ Step 2 - Set the ANDROID_HOME, platform-tools, tools, tools_bin and emulator you
       export PATH=$PATH:$ANDROID_HOME/tools/bin 
      
       export PATH=$PATH:$ANDROID_HOME/emulator 
+      
+      
+      
+## iOS setup
+
+Step 1 - Download and install Xcode.
+
+Step 2 - Configure the Xcode command-line tools
+
+      $ sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+ 
+      $ sudo xcodebuild -runFirstLaunch
+      
+      
+Step 3 - The Xcode license agreement is signed by either opening Xcode once and confirming or running " sudo xcodebuild -license " from the command line.
+
+
+
      
     
 
