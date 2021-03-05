@@ -49,7 +49,7 @@ Step 1 - Go to the following link and download the latest stable release of the 
      
 Step 2 - Create the development folders and Extract the download file uisng following commands:
 
-     ` ~$ cd ~/development `
+      ~$ cd ~/development 
      
      ` ~$ unzip ~/Downloads/flutter_macos_2.0.1-stable.zip `
      
