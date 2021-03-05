@@ -81,6 +81,25 @@ Step 4 - Run the following command to see if there are any dependencies you need
 # Platform setup
 
 ## Android setup
+
+Step 1 - Download and install Android Studio.
+
+Step 2 - Set the ANDROID_HOME, platform-tools, tools, tools_bin and emulator your path. 
+Open your " .bash_profile " file in your computer and add folowing paths
+
+     ` export ANDROID_HOME=[PATH_TO_ABDROID_DIRECTORY]/sdk `
+     
+     ` export PATH=$PATH:$ANDROID_HOME/platform-tools `
+     
+     ` export PATH=$PATH:$ANDROID_HOME/tools `
+     
+     ` export PATH=$PATH:$ANDROID_HOME/tools/bin `
+     
+     ` export PATH=$PATH:$ANDROID_HOME/emulator `
+     
+    
+
+
      
      
 
