@@ -51,31 +51,31 @@ Step 2 - Create the development folders and Extract the download file uisng foll
 
       ~$ cd ~/development 
      
-     ` ~$ unzip ~/Downloads/flutter_macos_2.0.1-stable.zip `
+      ~$ unzip ~/Downloads/flutter_macos_2.0.1-stable.zip 
      
 Step 3 - Add the flutter tool to your path using following commands:
 
 This command helps to sets PATH variable for the current terminal window. To permanently add Flutter to your path follow the following optional step. 
 
-     ` ~$ export PATH="$PATH:`pwd`/flutter/bin" `
+      ~$ export PATH="$PATH:`pwd`/flutter/bin" 
      
 ### Optional Step
 
 Optional Step 1 - Open new Terminal and type the following commands:
 It helps to open your " .bash_profile " file in your computer
 
-     ` ~$ open -e .bash_profile `
+      ~$ open -e .bash_profile 
      
 Optional Step 2 - Add folowing line inside the .bash_profile file:
 
-     ` export PATH="$PATH:[PATH_TO_FLUTTER_GIT_DIRECTORY]/flutter/bin" `
+      export PATH="$PATH:[PATH_TO_FLUTTER_GIT_DIRECTORY]/flutter/bin" 
      
      
      
      
 Step 4 - Run the following command to see if there are any dependencies you need to install to complete the setup.
 
-     ` ~$ flutter doctor `
+      ~$ flutter doctor 
      
      
 # Platform setup
@@ -87,15 +87,15 @@ Step 1 - Download and install Android Studio.
 Step 2 - Set the ANDROID_HOME, platform-tools, tools, tools_bin and emulator your path. 
 Open your " .bash_profile " file in your computer and add folowing paths
 
-     ` export ANDROID_HOME=[PATH_TO_ABDROID_DIRECTORY]/sdk `
+      export ANDROID_HOME=[PATH_TO_ABDROID_DIRECTORY]/sdk 
      
-     ` export PATH=$PATH:$ANDROID_HOME/platform-tools `
+      export PATH=$PATH:$ANDROID_HOME/platform-tools 
      
-     ` export PATH=$PATH:$ANDROID_HOME/tools `
+      export PATH=$PATH:$ANDROID_HOME/tools 
      
-     ` export PATH=$PATH:$ANDROID_HOME/tools/bin `
+      export PATH=$PATH:$ANDROID_HOME/tools/bin 
      
-     ` export PATH=$PATH:$ANDROID_HOME/emulator `
+      export PATH=$PATH:$ANDROID_HOME/emulator 
      
     
 
