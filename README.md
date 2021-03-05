@@ -71,9 +71,16 @@ Optional Step 2 - Add folowing line inside the .bash_profile file:
      ` export PATH="$PATH:[PATH_TO_FLUTTER_GIT_DIRECTORY]/flutter/bin" `
      
      
+     
+     
 Step 4 - Run the following command to see if there are any dependencies you need to install to complete the setup.
 
      ` ~$ flutter doctor `
+     
+     
+# Platform setup
+
+## Android setup
      
      
 
