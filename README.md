@@ -29,3 +29,9 @@
      ` ~$ git push -u origin main `
      
 # Flutter dev environment
+Follow the following instructions to set up a Flutter development environment for macOS platform.
+
+## System requirements
+ - Operating Systems: macOS (64-bit)
+ - Disk Space: 2.8 GB (does not include disk space for IDE/tools)
+ - Tools: Flutter uses git for installation and upgrade. Installing Xcode and Android Studio
