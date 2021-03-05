@@ -27,8 +27,14 @@
      ` ~$ git branch -M main `
 
      ` ~$ git push -u origin main `
-     
+   
+   
+   
 # Flutter dev environment
+
+ 6. Clearly summarize these steps (e.g. what to download, what commands to run, what to change in the environment, ...), so that someone else can use your short     note to set up a Flutter dev environment for themselves faster.
+
+
 Follow the following instructions to set up a Flutter development environment for macOS platform.
 
 ## System requirements
