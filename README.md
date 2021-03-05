@@ -69,6 +69,12 @@ It helps to open your " .bash_profile " file in your computer
 Optional Step 2 - Add folowing line inside the .bash_profile file:
 
       export PATH="$PATH:[PATH_TO_FLUTTER_GIT_DIRECTORY]/flutter/bin" 
+      
+
+* If you do not have  " .bash_profile " follow the following command to create the " .bash_profile ". Open the terminal and type the following command
+
+      ~$ vim .bash_profile
+      
      
      
      
