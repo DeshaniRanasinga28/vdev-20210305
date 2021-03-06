@@ -19,7 +19,11 @@ Future<Data> getAllItemDataList(context) async {
     if (response.statusCode == 200) {
       final items = json.decode(response.body);
       print("body:---> ${response.body}");
-      data = Data.fromJson(items);
+
+      data =  Data.fromJson(items);
+
+
+
     }else if(response.statusCode == 400){
       Toast.show("bad request", context,
           backgroundColor: Colors.red, textColor: red);
