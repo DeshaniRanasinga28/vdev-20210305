@@ -121,6 +121,13 @@ Step 3 - The Xcode license agreement is signed by either opening Xcode once and 
 
 
 
+# Concepts
+
+7. What are the important changes to Flutter and Dart that was announced at the Flutter Engage online conference on 2021 March?
+
+
+
+
      
     
 
