@@ -1,44 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+import 'app/ui/screen/splash_screen.dart';
+
+
 
 void main() {
-  runApp(MyApp());
+  runApp(Vdev());
 }
 
-class MyApp extends StatelessWidget {
+class Vdev extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Vdev',
+      routes: {
+
+      },
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        // fontFamily: 'OpenSans',
+        primaryColor: Colors.white,
+        primarySwatch: Colors.grey,
       ),
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-          ],
-        ),
-      ),
+      home: SplashScreen(),
     );
   }
 }
