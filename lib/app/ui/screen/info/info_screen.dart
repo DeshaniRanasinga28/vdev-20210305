@@ -17,6 +17,9 @@ class _InfoScreenState extends State<InfoScreen>{
 
     return Scaffold(
       backgroundColor: white225,
+      appBar: AppBar(
+        backgroundColor: Colors.blueGrey[700],
+      ),
       body: SafeArea(
           child: Column(
             children: [
