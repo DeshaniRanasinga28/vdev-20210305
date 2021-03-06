@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:vdev/app/global/app_colors.dart';
 
-class InfoScreen extends StatefulWidget {
+class AboutScreen extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    return _InfoScreenState();
+    return _AboutScreenState();
   }
 }
 
-class _InfoScreenState extends State<InfoScreen>{
+class _AboutScreenState extends State<AboutScreen>{
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class _InfoScreenState extends State<InfoScreen>{
       body: SafeArea(
           child: Column(
             children: [
-              Text("info")
+              Text("_AboutScreenState")
             ],
           )
       ),
