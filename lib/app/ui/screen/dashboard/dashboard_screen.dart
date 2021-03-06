@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 import 'package:vdev/app/global/app_colors.dart';
+import 'package:vdev/app/model/category.dart';
 import 'package:vdev/app/model/model.dart';
+import 'package:vdev/app/provider/item_provider.dart';
 import 'package:vdev/app/ui/widgets/common/common.dart';
 import 'package:vdev/app/ui/widgets/custom_flat_button.dart';
 
@@ -21,8 +24,17 @@ class DashboardScreen extends StatefulWidget {
 class _DashboardScreenState extends State<DashboardScreen>{
 
   @override
+  void initState() {
+    final getItemList = Provider.of<ItemProviderModel>(context, listen: false);
+    getItemList.getItemsData(context);
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     var w = MediaQuery.of(context).size.width;
+    final getItemList = Provider.of<ItemProviderModel>(context);
+
     return Scaffold(
         backgroundColor: white225,
         body: SafeArea(
@@ -70,22 +82,51 @@ class _DashboardScreenState extends State<DashboardScreen>{
                 Padding(
                   padding: EdgeInsets.only(top : 20.0, right: 10.0, left: 30.0),
                   child: Container(
-                  alignment: Alignment.centerLeft,
-                  child: textLabel('Product Categories', 24.0, FontWeight.w700),
+                    alignment: Alignment.centerLeft,
+                    child: textLabel('Product Categories', 24.0, FontWeight.w700),
+                  ),
                 ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 30.0, right: 30.0, top: 20.0),
-                  child: categoryView(w, "Beauty", black0, white225)
-                ),
-                Padding(
-                    padding: EdgeInsets.only(left: 30.0, right: 30.0, top: 0),
-                    child: categoryView(w, "Clothing @ Music", black0, white225)
-                ),
-                Padding(
-                    padding: EdgeInsets.only(left: 30.0, right: 30.0, top: 0),
-                    child: categoryView(w, "Grocery & Games", black0, black0)
-                ),
+                !getItemList.isLoading
+                ? Expanded(
+                 child:  Container(
+                   padding: EdgeInsets.only(top : 20.0, right: 10.0, left: 30.0),
+                  child: ListView.builder(
+                    // scrollDirection: Axis.vertical,
+                      itemCount: getItemList.itemData.data.length != 0
+                          ? getItemList.itemData.data.length
+                          : 0,
+                      itemBuilder: (context, index) {
+                        final Item item = getItemList.itemData.data[index];
+                        return Text("dd ${item.name.toString()}", style: TextStyle(color: Colors.black),);
+                      }
+                  ),
+                )
+                )
+                : Container(
+                    child: Center(
+                        child: CircularProgressIndicator()))
+
+
+
+                // Padding(
+                //   padding: EdgeInsets.only(top : 20.0, right: 10.0, left: 30.0),
+                //   child: Container(
+                //   alignment: Alignment.centerLeft,
+                //   child: textLabel('Product Categories', 24.0, FontWeight.w700),
+                //   ),
+                // ),
+                // Padding(
+                //   padding: EdgeInsets.only(left: 30.0, right: 30.0, top: 20.0),
+                //   child: categoryView(w, "Beauty", black0, white225)
+                // ),
+                // Padding(
+                //     padding: EdgeInsets.only(left: 30.0, right: 30.0, top: 0),
+                //     child: categoryView(w, "Clothing @ Music", black0, white225)
+                // ),
+                // Padding(
+                //     padding: EdgeInsets.only(left: 30.0, right: 30.0, top: 0),
+                //     child: categoryView(w, "Grocery & Games", black0, black0)
+                // ),
               ],
             )
         ),

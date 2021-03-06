@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
+import 'package:provider/provider.dart';
+import 'app/provider_config.dart';
 import 'app/ui/screen/splash_screen.dart';
 
 
@@ -16,18 +17,21 @@ class Vdev extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Vdev',
-      routes: {
+    return MultiProvider(
+        providers: providers,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Vdev',
+        routes: {
 
-      },
-      theme: ThemeData(
-        // fontFamily: 'OpenSans',
-        primaryColor: Colors.white,
-        primarySwatch: Colors.grey,
+        },
+        theme: ThemeData(
+          // fontFamily: 'OpenSans',
+          primaryColor: Colors.white,
+          primarySwatch: Colors.grey,
+        ),
+        home: SplashScreen(),
       ),
-      home: SplashScreen(),
     );
   }
 }
