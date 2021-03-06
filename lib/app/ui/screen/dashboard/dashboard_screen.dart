@@ -64,10 +64,7 @@ class _DashboardScreenState extends State<DashboardScreen>{
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
                             textColor: Colors.white,
-                            onPressed: () {
-                              // Navigator.of(context).pushNamed("/home");
-                              print(":--->ERROR");
-                            },
+                            onPressed: () => Navigator.of(context).pushNamed("/signInScreen"),
                             color: Colors.blueGrey[700],
                             splashColor: Colors.black12,
                             borderColor: Colors.black,
@@ -110,27 +107,6 @@ class _DashboardScreenState extends State<DashboardScreen>{
                     child: Center(
                         child: CircularProgressIndicator()))
 
-
-
-                // Padding(
-                //   padding: EdgeInsets.only(top : 20.0, right: 10.0, left: 30.0),
-                //   child: Container(
-                //   alignment: Alignment.centerLeft,
-                //   child: textLabel('Product Categories', 24.0, FontWeight.w700),
-                //   ),
-                // ),
-                // Padding(
-                //   padding: EdgeInsets.only(left: 30.0, right: 30.0, top: 20.0),
-                //   child: categoryView(w, "Beauty", black0, white225)
-                // ),
-                // Padding(
-                //     padding: EdgeInsets.only(left: 30.0, right: 30.0, top: 0),
-                //     child: categoryView(w, "Clothing @ Music", black0, white225)
-                // ),
-                // Padding(
-                //     padding: EdgeInsets.only(left: 30.0, right: 30.0, top: 0),
-                //     child: categoryView(w, "Grocery & Games", black0, black0)
-                // ),
               ],
             )
         ),
@@ -149,8 +125,7 @@ class _DashboardScreenState extends State<DashboardScreen>{
                     fontWeight: FontWeight.w700,
                     textColor: Colors.white,
                     onPressed: () {
-                      // Navigator.of(context).pushNamed("/home");
-                      print(":--->ERROR");
+
                     },
                     color: Colors.blueGrey[700],
                     splashColor: Colors.black12,
