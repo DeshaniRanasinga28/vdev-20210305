@@ -126,7 +126,7 @@ Step 3 - The Xcode license agreement is signed by either opening Xcode once and 
 7. What are the important changes to Flutter and Dart that was announced at the Flutter Engage online conference on 2021 March?
 
  **- Flutter on the web**
- 
+   
    Flutter 2 is production-quality support for the web. This initial release focuses on three app scenarios in particular:
    
    - **Progressive web apps (PWAs)** that combine the web’s reach with the capabilities of a desktop app.
