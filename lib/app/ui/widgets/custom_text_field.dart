@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:vdev/app/global/app_colors.dart';
 
-class CustomTextField extends StatefulWidget{
-  final TextEditingController controller;
+class CustomTextField extends StatelessWidget{
   final Color baseColor;
   final Color borderColor;
   final Color errorColor;
@@ -9,70 +9,41 @@ class CustomTextField extends StatefulWidget{
   final bool obscureText;
   final Function validator;
   final Function onChanged;
+  final bool isPassword;
+  final bool isEmail;
 
 
   CustomTextField(
       {
-        this.controller,
         this.baseColor,
         this.borderColor,
         this.errorColor,
         this.inputType,
         this.obscureText,
         this.validator,
-        this.onChanged}
-        );
-
-  @override
-  _CustomTextFieldState createState() => _CustomTextFieldState();
-
-}
-
-class _CustomTextFieldState extends State<CustomTextField>{
-  Color currentColor;
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    currentColor = widget.borderColor;
-  }
+        this.onChanged,
+        this.isPassword = false,
+        this.isEmail = false,
+      });
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Card(
-      elevation: 0.0,
-      shape: RoundedRectangleBorder(
-        side: BorderSide(color: currentColor, width: 1.5),
-        borderRadius: BorderRadius.circular(0.0),
-      ),
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.0),
-        child: TextField(
-          obscureText: widget.obscureText,
-          onChanged: (text){
-            if(widget.onChanged != null){
-              widget.onChanged(text);
-            }
-            setState(() {
-              if(!widget.validator(text) || text.length == 0 ){
-                currentColor = widget.errorColor;
-
-              }else{
-                currentColor = widget.baseColor;
-              }
-            });
-          },
-          controller: widget.controller,
-          decoration: InputDecoration(
-            hintStyle: TextStyle(
-              fontFamily: "OpenSans",
-              fontWeight: FontWeight.w300,
-            ),
-            border: InputBorder.none,
+    return Padding(
+      padding: EdgeInsets.all(8.0),
+      child: TextFormField(
+        decoration: InputDecoration(
+          contentPadding: EdgeInsets.all(15.0),
+          border: new OutlineInputBorder(
+              borderSide: new BorderSide(color: black0)
           ),
+          filled: true,
+          fillColor: Colors.grey[200],
         ),
+        obscureText: isPassword ? true : false,
+        validator: validator,
+        onSaved: onChanged,
+        keyboardType: isEmail ? TextInputType.emailAddress : TextInputType.text,
       ),
     );
   }

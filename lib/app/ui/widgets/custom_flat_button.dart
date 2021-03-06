@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:vdev/app/global/app_colors.dart';
 
-class CustomFlatButton extends StatelessWidget{
+class CustomFlatButton extends StatefulWidget{
   final String title;
   final Color textColor;
   final double fontSize;
@@ -25,35 +26,34 @@ class CustomFlatButton extends StatelessWidget{
         this.borderWidth});
 
   @override
+  _CustomFlatButtonState createState() => _CustomFlatButtonState();
+  
+}
+
+class _CustomFlatButtonState extends State<CustomFlatButton> {
+
+  @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return FlatButton(
-      onPressed: onPressed,
-      color: color,
-      splashColor: splashColor,
+      onPressed: widget.onPressed,
+      color: widget.color,
+      splashColor: widget.splashColor,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 12.0),
         child: Text(
-          title,
+          widget.title,
           softWrap: true,
           textAlign: TextAlign.center,
           style: TextStyle(
-            color: textColor,
+            color: widget.textColor,
             decoration: TextDecoration.none,
-            fontSize: fontSize,
-            fontWeight: fontWeight,
+            fontSize: widget.fontSize,
+            fontWeight: widget.fontWeight,
             fontFamily: "OpenSans",
           ),
         ),
       ),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(0.0),
-        side: BorderSide(
-          color: borderColor,
-          width: 1.0
-        )
-      ),
     );
   }
-  
 }
