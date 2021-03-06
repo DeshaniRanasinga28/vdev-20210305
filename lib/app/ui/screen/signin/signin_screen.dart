@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vdev/app/global/app_colors.dart';
 import 'package:vdev/app/ui/widgets/common/common.dart';
+import 'package:vdev/app/ui/widgets/custom_flat_button.dart';
 import 'package:vdev/app/ui/widgets/custom_text_field.dart';
 import 'package:vdev/app/validator.dart';
 
@@ -62,7 +63,7 @@ class _SignInScreenState extends State<SignInScreen>{
                 child: Column(
                   // mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                   Padding(
+                    Padding(
                      padding: EdgeInsets.fromLTRB(20, 60, 20, 20),
                      child:  Row(
                        children: [
@@ -84,8 +85,8 @@ class _SignInScreenState extends State<SignInScreen>{
                        ],
                      ),
                    ),
-                   Padding(
-                      padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 0, 20, 20),
                       child:  Row(
                         children: [
                           Expanded(
@@ -102,6 +103,42 @@ class _SignInScreenState extends State<SignInScreen>{
                               child: passwordField,
                             ),
                             flex: 2,
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 0, 20, 20),
+                      child:  Row(
+                        children: [
+                          Expanded(
+                            child: SizedBox(
+                              height: 50.0
+                            ),
+                            flex: 2,
+                          ),
+                          Expanded(
+                            child: Container(
+                              height: 50.0,
+                              alignment: Alignment.centerRight,
+                              child: Padding(
+                                padding: const EdgeInsets.only(right: 10.0),
+                                child: CustomFlatButton(
+                                  title: "Sign-in",
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w700,
+                                  textColor: Colors.white,
+                                  onPressed: () {
+                                    // Navigator.of(context).pushNamed("/home");
+                                  },
+                                  splashColor: Colors.black12,
+                                  borderColor: Colors.black,
+                                  borderWidth: 0,
+                                  color: Colors.blueGrey[700],
+                                ),
+                              ),
+                            ),
+                            // flex: 1,
                           )
                         ],
                       ),
