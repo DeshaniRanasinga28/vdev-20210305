@@ -5,7 +5,7 @@ import 'package:vdev/app/ui/widgets/common/common.dart';
 import 'package:vdev/app/ui/widgets/custom_flat_button.dart';
 import 'package:vdev/app/ui/widgets/custom_text_field.dart';
 import 'package:validators/validators.dart' as validator;
-import 'package:vdev/app/ui/widgets/result.dart';
+import 'package:vdev/app/ui/screen/dashboard/dashboard_screen.dart';
 
 class SignInScreen extends StatefulWidget{
   @override
@@ -16,18 +16,10 @@ class SignInScreen extends StatefulWidget{
 
 class _SignInScreenState extends State<SignInScreen>{
 
-
   final _formKey = GlobalKey<FormState>();
   Model model = Model();
 
   Color _checkedColor = Colors.blueGrey[700];
-
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
 
 
   @override
@@ -41,7 +33,6 @@ class _SignInScreenState extends State<SignInScreen>{
           child: Form(
             key: _formKey,
               child: Column(
-                // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
                     padding: EdgeInsets.fromLTRB(20, 60, 20, 20),
@@ -134,10 +125,12 @@ class _SignInScreenState extends State<SignInScreen>{
                                     setState(() {
                                       _checkedColor = Colors.blueGrey[700];
                                     });
+
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => Result(model: this.model)));
+                                            builder: (context) => DashboardScreen(model: this.model)));
+
                                   }else{
                                     setState(() {
                                       _checkedColor = Colors.grey;
@@ -164,5 +157,21 @@ class _SignInScreenState extends State<SignInScreen>{
         )
     );
   }
+
+  // void showPermissionPopup() async {
+  //   showDialog(
+  //     context: context,
+  //     builder: (
+  //         BuildContext context) {
+  //       return AlertDialog(
+  //         shape: RoundedRectangleBorder(
+  //           borderRadius: BorderRadius.circular(10.0),
+  //         ),
+  //         title: Text('title'),
+  //         content: Text('content'),
+  //       );
+  //     },
+  //   );
+  // }
 
 }
