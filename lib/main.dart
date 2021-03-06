@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'app/provider_config.dart';
+import 'app/ui/screen/info/info_screen.dart';
 import 'app/ui/screen/signin/signin_screen.dart';
 import 'app/ui/screen/splash_screen.dart';
 
@@ -25,6 +26,7 @@ class Vdev extends StatelessWidget {
         title: 'Vdev',
         routes: {
           '/signInScreen' : (BuildContext context) => new SignInScreen(),
+          '/infoScreen' : (BuildContext context) => new InfoScreen(),
         },
         theme: ThemeData(
           // fontFamily: 'OpenSans',

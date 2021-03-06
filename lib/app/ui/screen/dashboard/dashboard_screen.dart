@@ -37,78 +37,83 @@ class _DashboardScreenState extends State<DashboardScreen>{
 
     return Scaffold(
         backgroundColor: white225,
-        body: SafeArea(
-            child: Column(
-              // mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                // Text("DashboardScreen == ${widget.model.email}")
-                Padding(
-                  padding: EdgeInsets.only(top : 20.0, right: 10.0, left: 20.0),
-                  child:  Row(
-                    children: [
-                      SizedBox(
-                        width: 20.0,
-                      ),
-                      Expanded(
-                        child: Container(
-                          alignment: Alignment.centerRight,
-                          child: textLabel('${widget.model.email}', 18.0, FontWeight.w700),
+        body: WillPopScope(
+          onWillPop: () async {
+            return Future.value(false);
+          },
+          child: SafeArea(
+              child: Column(
+                // mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Text("DashboardScreen == ${widget.model.email}")
+                  Padding(
+                    padding: EdgeInsets.only(top : 20.0, right: 10.0, left: 20.0),
+                    child:  Row(
+                      children: [
+                        SizedBox(
+                          width: 20.0,
                         ),
-                        flex: 2,
-                      ),
-                      Expanded(
-                        child: Container(
-                          alignment: Alignment.centerRight,
-                          child: CustomFlatButton(
-                            title: "Sign-out",
-                            fontSize: 20,
-                            fontWeight: FontWeight.w700,
-                            textColor: Colors.white,
-                            onPressed: () => Navigator.of(context).pushNamed("/signInScreen"),
-                            color: Colors.blueGrey[700],
-                            splashColor: Colors.black12,
-                            borderColor: Colors.black,
-                            borderWidth: 0,
-                            // color: Colors.blueGrey[700],
+                        Expanded(
+                          child: Container(
+                            alignment: Alignment.centerRight,
+                            child: textLabel('${widget.model.email}', 18.0, FontWeight.w700),
                           ),
+                          flex: 2,
                         ),
-                      )
-                    ],
+                        Expanded(
+                          child: Container(
+                            alignment: Alignment.centerRight,
+                            child: CustomFlatButton(
+                              title: "Sign-out",
+                              fontSize: 20,
+                              fontWeight: FontWeight.w700,
+                              textColor: Colors.white,
+                              onPressed: () => Navigator.of(context).pushNamed("/signInScreen"),
+                              color: Colors.blueGrey[700],
+                              splashColor: Colors.black12,
+                              borderColor: Colors.black,
+                              borderWidth: 0,
+                              // color: Colors.blueGrey[700],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top : 20.0, right: 10.0, left: 30.0),
-                  child: Container(
-                    alignment: Alignment.centerLeft,
-                    child: textLabel('Product Categories', 24.0, FontWeight.w700),
+                  Padding(
+                    padding: EdgeInsets.only(top : 20.0, right: 10.0, left: 30.0),
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: textLabel('Product Categories', 24.0, FontWeight.w700),
+                    ),
                   ),
-                ),
-                !getItemList.isLoading
-                ?
-                Expanded(
-                 child:  Container(
-                   padding: EdgeInsets.only(top : 20.0, right: 10.0, left: 30.0),
-                  child: ListView.builder(
-                    itemCount: getItemList.itemData.data.length,
-                      itemBuilder: (context, index) {
-                        final Item item = getItemList.itemData.data[index];
-                        return index == getItemList.itemData.data.length - 1 ? Padding(
-                            padding: EdgeInsets.only(left: 30.0, right: 30.0),
-                            child: categoryView(w, "${item.name}", black0, black0)
-                        ):
-                        Padding(
-                        padding: EdgeInsets.only(left: 30.0, right: 30.0),
-                        child: categoryView(w, "${item.name}", black0, white225)
-                        );
-                      }
-                  ))
-                )
-                : Container(
-                    child: Center(
-                        child: CircularProgressIndicator()))
+                  !getItemList.isLoading
+                      ?
+                  Expanded(
+                      child:  Container(
+                          padding: EdgeInsets.only(top : 20.0, right: 10.0, left: 30.0),
+                          child: ListView.builder(
+                              itemCount: getItemList.itemData.data.length,
+                              itemBuilder: (context, index) {
+                                final Item item = getItemList.itemData.data[index];
+                                return index == getItemList.itemData.data.length - 1 ? Padding(
+                                    padding: EdgeInsets.only(left: 30.0, right: 30.0),
+                                    child: categoryView(w, "${item.name}", black0, black0)
+                                ):
+                                Padding(
+                                    padding: EdgeInsets.only(left: 30.0, right: 30.0),
+                                    child: categoryView(w, "${item.name}", black0, white225)
+                                );
+                              }
+                          ))
+                  )
+                      : Container(
+                      child: Center(
+                          child: CircularProgressIndicator()))
 
-              ],
-            )
+                ],
+              )
+          ),
         ),
       bottomNavigationBar: Container(
         height: 90.0,
@@ -124,9 +129,7 @@ class _DashboardScreenState extends State<DashboardScreen>{
                     fontSize: 20,
                     fontWeight: FontWeight.w700,
                     textColor: Colors.white,
-                    onPressed: () {
-
-                    },
+                    onPressed: () => Navigator.of(context).pushNamed("/infoScreen"),
                     color: Colors.blueGrey[700],
                     splashColor: Colors.black12,
                     borderColor: Colors.black,

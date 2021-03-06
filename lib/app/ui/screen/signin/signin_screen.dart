@@ -33,6 +33,7 @@ class _SignInScreenState extends State<SignInScreen>{
         backgroundColor: white225,
         appBar: AppBar(
           backgroundColor: Colors.blueGrey[700],
+          automaticallyImplyLeading: false,
         ),
         body: SafeArea(
           child: Form(
