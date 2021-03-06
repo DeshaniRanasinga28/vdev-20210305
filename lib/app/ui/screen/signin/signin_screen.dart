@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:vdev/app/global/app_colors.dart';
+import 'package:vdev/app/global/global.dart';
 import 'package:vdev/app/model/model.dart';
 import 'package:vdev/app/ui/widgets/common/common.dart';
 import 'package:vdev/app/ui/widgets/custom_flat_button.dart';
@@ -21,6 +23,9 @@ class _SignInScreenState extends State<SignInScreen>{
 
   Color _checkedColor = Colors.blueGrey[700];
 
+  var now = DateTime.now();
+  // var format = DateFormat('MM-d');
+  // var displayFormatDate = DateFormat('dd-MM-yyyy');
 
   @override
   Widget build(BuildContext context) {
@@ -126,10 +131,16 @@ class _SignInScreenState extends State<SignInScreen>{
                                       _checkedColor = Colors.blueGrey[700];
                                     });
 
+                                    String formatDate = format.format(now);
+                                    String formatTime = timeFormat.format(now);
+
+                                    print("Date:-->${formatDate.toString()}");
+                                    print("Time:-->${formatTime.toString()}");
+
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => DashboardScreen(model: this.model)));
+                                            builder: (context) => DashboardScreen(model: this.model, date: formatDate, time: formatTime,)));
 
                                   }else{
                                     setState(() {
