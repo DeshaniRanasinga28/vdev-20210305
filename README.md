@@ -203,24 +203,3 @@ Flutter works more like a gaming engine. The Flutter app framework when we are u
   [7]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615140015/Screenshot_2021-03-07_at_23.29.40_wil0it.png
     
   [8]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615140021/Screenshot_2021-03-07_at_23.29.57_sgku3y.png
-
-
-
-
-     
-    
-
-
-     
-     
-
-     
-
-     
-
-
-     
-     
-  
-     
-     
