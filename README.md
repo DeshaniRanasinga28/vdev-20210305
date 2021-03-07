@@ -192,43 +192,14 @@ Flutter works more like a gaming engine. The Flutter app framework when we are u
 
   [2]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139673/Screenshot_2021-03-07_at_23.22.42_au9sxk.png
   
-  [3]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139731/Screenshot_2021-03-07_at_23.22.47_xzk34m.png
+  [3]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615141729/Screenshot_2021-03-07_at_23.57.57_dpinyt.png
   
   [4]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139725/Screenshot_2021-03-07_at_23.22.52_zvmdwk.png
   
-  [5]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139805/Screenshot_2021-03-07_at_23.22.57_wwiqqz.png
+  [5]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615141764/Screenshot_2021-03-07_at_23.58.24_vsqgpv.png
     
   [6]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139714/Screenshot_2021-03-07_at_23.23.00_gjesw9.png
   
   [7]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615140015/Screenshot_2021-03-07_at_23.29.40_wil0it.png
     
   [8]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615140021/Screenshot_2021-03-07_at_23.29.57_sgku3y.png
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> fc71ded4eb23b38ce700b43e28055febe04475b0
-   
-
-
-
-
-     
-    
-
-
-     
-     
-
-     
-
-     
-
-
-     
-     
-  
-     
-     
