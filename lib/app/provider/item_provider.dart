@@ -19,6 +19,7 @@ class ItemProviderModel with ChangeNotifier {
         await getAllItemDataList(context).then((res) {
           if (res != null) {
             itemData = res;
+            itemData.data.sort((a, b) =>  a.name.compareTo(b.name));
           }
         });
         isLoading = false;
@@ -30,3 +31,4 @@ class ItemProviderModel with ChangeNotifier {
     });
   }
 }
+
