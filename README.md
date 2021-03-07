@@ -166,6 +166,10 @@ Flutter application is consistent with the Widgets. Those are rendered onto a Sk
 
 Flutter provides a Shell, that hosts the Dart VM. The Shell is platform-specific and giving access to the native platform APIs and hosting the establishing the platform relevant canvas. Also, help provide communication to the relevant IMEs and the systems application lifecycle events. There is also an embedder API. if you want to use Flutter like a library, instead of hosting running an app. 
 
+The engine layer is rendering the Dart Runtime, Skia, Platform Channels and much more and It helps to run inside the relevant platform Shell.
+
+The Flutter framework is includes everything that we will interact with when developing our app. 
+
 
 
 
