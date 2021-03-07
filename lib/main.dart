@@ -1,43 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+import 'app/provider_config.dart';
+import 'app/ui/screen/info/info_screen.dart';
+import 'app/ui/screen/signin/signin_screen.dart';
+import 'app/ui/screen/splash_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(Vdev());
 }
 
-class MyApp extends StatelessWidget {
+class Vdev extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-          ],
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+    return MultiProvider(
+        providers: providers,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Vdev',
+        routes: {
+          '/signInScreen' : (BuildContext context) => new SignInScreen(),
+          '/infoScreen' : (BuildContext context) => new InfoScreen(),
+        },
+        theme: ThemeData(
+          primaryColor: Colors.white,
+          primarySwatch: Colors.teal,
         ),
+        home: SplashScreen(),
       ),
     );
   }
