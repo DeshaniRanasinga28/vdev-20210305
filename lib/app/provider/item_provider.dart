@@ -9,7 +9,6 @@ class ItemProviderModel with ChangeNotifier {
   bool isLoading = true;
   Data itemData;
 
-
   getItemsData(context) {
     checkNetworkConnection(context).then((value) async {
       isLoading = true;
@@ -23,7 +22,8 @@ class ItemProviderModel with ChangeNotifier {
         isLoading = false;
         notifyListeners();
       } else {
-        Toast.show('Please check your Internet connection', context, duration: 2, backgroundColor: red);
+        Toast.show('Please check your Internet connection',
+            context, duration: 2, backgroundColor: red);
       }
     });
   }

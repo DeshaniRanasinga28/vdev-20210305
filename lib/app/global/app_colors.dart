@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 //white colors
 const Color white225 = Color.fromRGBO(255, 255, 255, 1); //#FFFFFF
 

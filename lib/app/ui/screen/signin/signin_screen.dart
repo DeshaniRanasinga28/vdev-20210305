@@ -24,11 +24,10 @@ class _SignInScreenState extends State<SignInScreen>{
 
   final _formKey = GlobalKey<FormState>();
   Model model = Model();
-
   Color _checkedColor = Colors.blueGrey[700];
-
   var now = DateTime.now();
   bool msg;
+
   @override
   void initState() {
     super.initState();
@@ -202,8 +201,6 @@ class _SignInScreenState extends State<SignInScreen>{
 
   _signIn(context, date, time){
     showPermissionPopup();
-    print("email:---->${model.email.toString()}");
-
     Future.delayed(Duration(seconds: 3), () {
       if(model.email == 'joe@black.lk' &&  model.password == 'Jo45*78' ||
           model.email == 'amal@acme.lk' &&  model.password == 'La79*!_io' ||

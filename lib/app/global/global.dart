@@ -1,7 +1,6 @@
 library my_prj.global;
 import 'package:intl/intl.dart';
 
-
 var format = DateFormat('MMM d');
 var timeFormat = DateFormat('hh:mm a');
 

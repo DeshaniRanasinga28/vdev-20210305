@@ -13,8 +13,7 @@ class CustomTextField extends StatelessWidget{
   final bool isEmail;
 
 
-  CustomTextField(
-      {
+  CustomTextField({
         this.baseColor,
         this.borderColor,
         this.errorColor,
@@ -28,7 +27,6 @@ class CustomTextField extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Padding(
       padding: EdgeInsets.all(8.0),
       child: TextFormField(

@@ -7,7 +7,6 @@ import 'category_screen.dart' as categoryScreen;
 import 'package:vdev/app/global/global.dart' as global;
 
 class InfoScreen extends StatefulWidget {
-
   @override
   State<StatefulWidget> createState() {
     return _InfoScreenState();
@@ -21,9 +20,8 @@ class _InfoScreenState extends State<InfoScreen>  with SingleTickerProviderState
 
   @override
   void initState() {
-    // TODO: implement initState
-    controller = new TabController(length: 3, vsync: this, initialIndex: 0);
     super.initState();
+    controller = new TabController(length: 3, vsync: this, initialIndex: 0);
 
     setState(() {
       if (global.tabIndex == 1) {
@@ -36,7 +34,6 @@ class _InfoScreenState extends State<InfoScreen>  with SingleTickerProviderState
         _currentTabIndex = 0;
       }
     });
-
   }
 
   @override
@@ -114,5 +111,4 @@ class _InfoScreenState extends State<InfoScreen>  with SingleTickerProviderState
       ),
     );
   }
-
 }

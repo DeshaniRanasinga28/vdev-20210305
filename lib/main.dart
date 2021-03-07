@@ -6,8 +6,6 @@ import 'app/ui/screen/info/info_screen.dart';
 import 'app/ui/screen/signin/signin_screen.dart';
 import 'app/ui/screen/splash_screen.dart';
 
-
-
 void main() {
   runApp(Vdev());
 }
@@ -29,7 +27,6 @@ class Vdev extends StatelessWidget {
           '/infoScreen' : (BuildContext context) => new InfoScreen(),
         },
         theme: ThemeData(
-          // fontFamily: 'OpenSans',
           primaryColor: Colors.white,
           primarySwatch: Colors.teal,
         ),

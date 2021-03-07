@@ -1,15 +1,11 @@
 import 'dart:io';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:vdev/app/global/global.dart' as global;
 import 'package:webview_flutter/webview_flutter.dart';
 
-
-
 class ProjectScreen extends StatefulWidget {
-
   @override
   State<StatefulWidget> createState() {
     return _ProjectScreenState();
@@ -17,16 +13,12 @@ class ProjectScreen extends StatefulWidget {
 }
 
 class _ProjectScreenState extends State<ProjectScreen>{
-
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    // Enable hybrid composition.
     if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
 
     global.tabIndex = 1;
-
   }
 
   @override
@@ -40,5 +32,4 @@ class _ProjectScreenState extends State<ProjectScreen>{
           javascriptMode: JavascriptMode.unrestricted,
         ));
   }
-
 }

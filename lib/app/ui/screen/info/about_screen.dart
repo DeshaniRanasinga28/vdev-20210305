@@ -5,7 +5,6 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:vdev/app/global/global.dart' as global;
 
 class AboutScreen extends StatefulWidget {
-
   @override
   State<StatefulWidget> createState() {
     return _AboutScreenState();
@@ -16,15 +15,12 @@ class _AboutScreenState extends State<AboutScreen>{
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     global.tabIndex = 3;
   }
 
   @override
   Widget build(BuildContext context) {
-    var w = MediaQuery.of(context).size.width;
-
     return Scaffold(
       backgroundColor: white225,
       body: SafeArea(
@@ -37,15 +33,22 @@ class _AboutScreenState extends State<AboutScreen>{
                     Expanded(
                       child: Container(
                         alignment: Alignment.centerLeft,
-                        child: textLabel('Name :', 16.0, FontWeight.w700, black0),
+                        child: textLabel(
+                            'Name :',
+                            16.0,
+                            FontWeight.w700,
+                            black0),
                       ),
                       flex: 1,
                     ),
                     Expanded(
                       child: Container(
                         alignment: Alignment.centerLeft,
-                        child: textLabel(''
-                            '${global.name}', 16.0, FontWeight.w700, black0),
+                        child: textLabel(
+                            '${global.name}',
+                            16.0,
+                            FontWeight.w700,
+                            black0),
                       ),
                       flex: 2,
                     )
@@ -59,7 +62,11 @@ class _AboutScreenState extends State<AboutScreen>{
                     Expanded(
                       child: Container(
                         alignment: Alignment.centerLeft,
-                        child: textLabel('Repo URL :', 16.0, FontWeight.w700, black0),
+                        child: textLabel(
+                            'Repo URL :',
+                            16.0,
+                            FontWeight.w700,
+                            black0),
                       ),
                       flex: 1,
                     ),
@@ -67,7 +74,11 @@ class _AboutScreenState extends State<AboutScreen>{
                       child: Container(
                         alignment: Alignment.centerLeft,
                            child: InkWell(
-                               child: textLabel('${global.github_url}', 16.0, FontWeight.w700, blue34),
+                               child: textLabel(
+                                   '${global.github_url}',
+                                   16.0,
+                                   FontWeight.w700,
+                                   blue34),
                             onTap: _launchURL,
                            ),
                       ),
@@ -87,7 +98,7 @@ class _AboutScreenState extends State<AboutScreen>{
     if (await canLaunch(url)) {
       await launch(url);
     } else {
-      throw 'Could not launch $url';
+      throw 'Could not launch the URL';
     }
   }
 

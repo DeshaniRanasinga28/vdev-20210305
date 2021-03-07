@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:vdev/app/global/app_colors.dart';
 
 class CustomFlatButton extends StatefulWidget{
   final String title;
@@ -13,8 +12,7 @@ class CustomFlatButton extends StatefulWidget{
   final double borderWidth;
 
 
-  CustomFlatButton(
-      {
+  CustomFlatButton({
         this.title,
         this.textColor,
         this.fontSize,
@@ -34,7 +32,6 @@ class _CustomFlatButtonState extends State<CustomFlatButton> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return FlatButton(
       onPressed: widget.onPressed,
       color: widget.color,
