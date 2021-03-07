@@ -125,15 +125,85 @@ Step 3 - The Xcode license agreement is signed by either opening Xcode once and 
 
 7. What are the important changes to Flutter and Dart that was announced at the Flutter Engage online conference on 2021 March?
 
- **- Flutter on the web**
-   
-   Flutter 2 is production-quality support for the web. This initial release focuses on three app scenarios in particular:
-   
-   - **Progressive web apps (PWAs)** that combine the web’s reach with the capabilities of a desktop app.
+**- Flutter web available in stable version.**
+
+**- Google Pay rewrote in flutter for productivity gains.**
+
+**- iRobot building Multiplatform with Flutter.**
+
+**- Available the stable version for macOS, Windows and Linux.**
+
+**- Microsoft contributing foldable support to Flutter.**
+
+**- Sound null safety is fully supported in stable as of Flutter 2.**
+
+**- The growing Flutter ecosystem.**
+
+**- Upgraded Firebase plugins for Flutter.**
+
+**- Announce that Flutter’s desktop support is available in the stable channel under an early release flag.**
+
+**- Announce an open beta for Google Mobile Ads SDK for Flutter.**
+
+**- Few iOS widgets have been added to the Cupertino design language implementation.**
+
+**- Flutter Introduce the two additional new widgets, AutocompleteCore and ScaffoldMessenger.**
+
+**- Toyota infotainment system powered by Flutter.**
+
+**- Multiple Flutter instances with Add-to-App.**
+
+
+8. In your own words, briefly describe how Flutter works.
+
+The Flutter architecture has consisted of 3 layers. 
+
+1. Platform
+2. Engine
+3. Framework
+
+Flutter application is consistent with the Widgets. Those are rendered onto a Skia canvas and sent to the platform. The platform shows the canvas and sends events back as required. Flutter application is compiled and run on the native platform.
+
+Flutter provides a Shell, that hosts the Dart VM. The Shell is platform-specific and giving access to the native platform APIs and hosting the establishing the platform relevant canvas. Also, help provide communication to the relevant IMEs and the systems application lifecycle events. There is also an embedder API. if you want to use Flutter like a library, instead of hosting running an app. The engine layer is rendering the Dart Runtime, Skia, Platform Channels and much more and It helps to run inside the relevant platform Shell.The Flutter framework is includes everything(Themes, Material, Widgets, Animation etc.). That we will interact with when developing our app. 
+
+Flutter works more like a gaming engine. The Flutter app framework when we are used then UI is built and rendered on a Skia Canvas as it changes. Flutter updates the UI at 60fps, and uses the GPU for most of the work. While this doesn’t affect to build an app, it is the reason the Flutter UI will be buttery smooth.Dart based application code will continue to run via the CPU, and in the specialized UI Thread, when touching UI related components.
+
+
+# Demo
+
+[![enter image description here][1]][1]
+
+[![enter image description here][2]][2]
+
+[![enter image description here][3]][3]
+
+[![enter image description here][4]][4]
+
+[![enter image description here][5]][5]
+
+[![enter image description here][6]][6]
+
+[![enter image description here][7]][7]
+
+[![enter image description here][8]][8]
+
+
+  [1]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139624/Screenshot_2021-03-07_at_23.20.41_ndvxaf.png
+
+  [2]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139673/Screenshot_2021-03-07_at_23.22.42_au9sxk.png
+  
+  [3]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139731/Screenshot_2021-03-07_at_23.22.47_xzk34m.png
+  
+  [4]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139725/Screenshot_2021-03-07_at_23.22.52_zvmdwk.png
+  
+  [5]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139805/Screenshot_2021-03-07_at_23.22.57_wwiqqz.png
     
-   - **Single page apps (SPAs) that** load once and transmit data to and from internet services.
+  [6]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139714/Screenshot_2021-03-07_at_23.23.00_gjesw9.png
+  
+  [7]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615140015/Screenshot_2021-03-07_at_23.29.40_wil0it.png
     
-   - **Bringing existing Flutter mobile apps to the web**, enabling shared code for both experiences.
+  [8]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615140021/Screenshot_2021-03-07_at_23.29.57_sgku3y.png
+
    
 
 
