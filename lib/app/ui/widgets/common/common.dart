@@ -40,6 +40,15 @@ Widget categoryView(w, text, topColor, bottomColor) {
   );
 }
 
+Widget tabLabel(text, fontSize, fontWeight) {
+  return Container(
+    child: Align(
+      alignment: Alignment.center,
+      child: textLabel(text, fontSize, fontWeight)
+    ),
+  );
+}
+
 
 
 

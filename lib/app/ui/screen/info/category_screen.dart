@@ -17,9 +17,6 @@ class _CategoryScreenState extends State<CategoryScreen>{
 
     return Scaffold(
       backgroundColor: white225,
-      appBar: AppBar(
-        backgroundColor: Colors.blueGrey[700],
-      ),
       body: SafeArea(
           child: Column(
             children: [

@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:vdev/app/global/app_colors.dart';
+import 'package:vdev/app/ui/widgets/common/common.dart';
+import 'project_screen.dart' as projetcScreen;
+
+import 'about_screen.dart' as aboutScreen;
+import 'category_screen.dart' as categoryScreen;
 
 class InfoScreen extends StatefulWidget {
 
@@ -9,10 +14,22 @@ class InfoScreen extends StatefulWidget {
   }
 }
 
-class _InfoScreenState extends State<InfoScreen>{
+class _InfoScreenState extends State<InfoScreen>  with SingleTickerProviderStateMixin{
+
+  TabController controller;
+  int _currentTabIndex = 0;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    controller = new TabController(length: 3, vsync: this, initialIndex: 0);
+    super.initState();
+
+  }
 
   @override
   Widget build(BuildContext context) {
+    var h = MediaQuery.of(context).size.height;
     var w = MediaQuery.of(context).size.width;
 
     return Scaffold(
@@ -27,7 +44,61 @@ class _InfoScreenState extends State<InfoScreen>{
       body: SafeArea(
           child: Column(
             children: [
-              Text("info")
+              Expanded(
+                flex: 1,
+                child: Container(
+                  padding: EdgeInsets.only(
+                      left: 20.0,
+                      right: 20.0,
+                      top: 20.0),
+                  child: DefaultTabController(
+                    length: 2, //(2)
+                    child: SizedBox(
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            padding: EdgeInsets.all(2.0),
+                            color: Colors.blueGrey[700],
+                            child: TabBar(
+                              controller: controller,
+                              indicatorColor: white225,
+                              labelColor: black0,
+                              unselectedLabelColor: black0,
+                              indicator: BoxDecoration(
+                                  border: Border.all(color: black0, width: 1),
+                                  color: white225,
+                              ),
+                              tabs: <Widget>[
+                                Tab(
+                                  child: tabLabel("Project", 18.0, FontWeight.w700)
+                                ),
+                                Tab(
+                                    child: tabLabel("Categories", 18.0, FontWeight.w700)
+                                ),
+                                Tab(
+                                    child: tabLabel("About", 18.0, FontWeight.w700)
+                                ),
+                              ],
+                            ),
+                          ),
+                          Expanded(
+                            child: Container(
+                              child: TabBarView(
+                                controller: controller,
+                                children: <Widget>[
+                                  new projetcScreen.ProjectScreen(),
+                                  new categoryScreen.CategoryScreen(),
+                                  new aboutScreen.AboutScreen()
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              )
             ],
           )
       ),
