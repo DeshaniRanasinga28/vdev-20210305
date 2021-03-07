@@ -168,6 +168,41 @@ Flutter provides a Shell, that hosts the Dart VM. The Shell is platform-specific
 
 Flutter works more like a gaming engine. The Flutter app framework when we are used then UI is built and rendered on a Skia Canvas as it changes. Flutter updates the UI at 60fps, and uses the GPU for most of the work. While this doesn’t affect to build an app, it is the reason the Flutter UI will be buttery smooth.Dart based application code will continue to run via the CPU, and in the specialized UI Thread, when touching UI related components.
 
+
+# Demo
+
+[![enter image description here][1]][1]
+
+[![enter image description here][2]][2]
+
+[![enter image description here][3]][3]
+
+[![enter image description here][4]][4]
+
+[![enter image description here][5]][5]
+
+[![enter image description here][6]][6]
+
+[![enter image description here][7]][7]
+
+[![enter image description here][8]][8]
+
+
+  [1]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139624/Screenshot_2021-03-07_at_23.20.41_ndvxaf.png
+
+  [2]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139673/Screenshot_2021-03-07_at_23.22.42_au9sxk.png
+  
+  [3]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139731/Screenshot_2021-03-07_at_23.22.47_xzk34m.png
+  
+  [4]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139725/Screenshot_2021-03-07_at_23.22.52_zvmdwk.png
+  
+  [5]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139805/Screenshot_2021-03-07_at_23.22.57_wwiqqz.png
+    
+  [6]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615139714/Screenshot_2021-03-07_at_23.23.00_gjesw9.png
+  
+  [7]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615140015/Screenshot_2021-03-07_at_23.29.40_wil0it.png
+    
+  [8]: https://res.cloudinary.com/thinksmart-solution/image/upload/v1615140021/Screenshot_2021-03-07_at_23.29.57_sgku3y.png
    
 
 
