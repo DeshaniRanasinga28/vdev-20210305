@@ -56,7 +56,7 @@ class _DashboardScreenState extends State<DashboardScreen>{
                         Expanded(
                           child: Container(
                             alignment: Alignment.centerRight,
-                            child: textLabel('${widget.model.email}', 18.0, FontWeight.w700),
+                            child: textLabel('${widget.model.email}', 18.0, FontWeight.w700, black0),
                           ),
                           flex: 2,
                         ),
@@ -84,7 +84,7 @@ class _DashboardScreenState extends State<DashboardScreen>{
                     padding: EdgeInsets.only(top : 20.0, right: 10.0, left: 30.0),
                     child: Container(
                       alignment: Alignment.centerLeft,
-                      child: textLabel('Product Categories', 24.0, FontWeight.w700),
+                      child: textLabel('Product Categories', 24.0, FontWeight.w700, black0),
                     ),
                   ),
                   !getItemList.isLoading
@@ -144,13 +144,13 @@ class _DashboardScreenState extends State<DashboardScreen>{
                     Expanded(
                       child: Container(
                         alignment: Alignment.centerRight,
-                        child: textLabel('Signed-in at:', 18.0, FontWeight.w700),
+                        child: textLabel('Signed-in at:', 18.0, FontWeight.w700, black0),
                       ),
                     ),
                     Expanded(
                       child: Container(
                         alignment: Alignment.centerRight,
-                        child: textLabel(' ${widget.date} ' +  ' ${widget.time}', 18.0, null),
+                        child: textLabel(' ${widget.date} ' +  ' ${widget.time}', 18.0, null, black0),
                       ),
                     ),
                   ],

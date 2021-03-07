@@ -10,3 +10,4 @@ String formatDate;
 String formatTime;
 
 String github_url = "https://github.com/DeshaniRanasinga28/vdev-20210305/tree/ui-dev";
+String name = "Deshani Ranasingha";

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:vdev/app/global/app_colors.dart';
 import 'package:vdev/app/ui/widgets/common/common.dart';
-import 'package:vdev/app/ui/widgets/custom_text_field.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:vdev/app/global/global.dart' as global;
 
 class AboutScreen extends StatefulWidget {
 
@@ -29,14 +30,15 @@ class _AboutScreenState extends State<AboutScreen>{
                     Expanded(
                       child: Container(
                         alignment: Alignment.centerLeft,
-                        child: textLabel('Name :', 16.0, FontWeight.w700),
+                        child: textLabel('Name :', 16.0, FontWeight.w700, black0),
                       ),
                       flex: 1,
                     ),
                     Expanded(
                       child: Container(
                         alignment: Alignment.centerLeft,
-                        child: textLabel('Deshani Ranasingha', 16.0, FontWeight.w700),
+                        child: textLabel(''
+                            '${global.name}', 16.0, FontWeight.w700, black0),
                       ),
                       flex: 2,
                     )
@@ -50,14 +52,17 @@ class _AboutScreenState extends State<AboutScreen>{
                     Expanded(
                       child: Container(
                         alignment: Alignment.centerLeft,
-                        child: textLabel('Repo URL :', 16.0, FontWeight.w700),
+                        child: textLabel('Repo URL :', 16.0, FontWeight.w700, black0),
                       ),
                       flex: 1,
                     ),
                     Expanded(
                       child: Container(
                         alignment: Alignment.centerLeft,
-                        child: textLabel('https://github.com/DeshaniRanasinga28/vdev-20210305/tree/ui-dev', 16.0, FontWeight.w700),
+                           child: InkWell(
+                               child: textLabel('${global.github_url}', 16.0, FontWeight.w700, blue34),
+                            onTap: _launchURL,
+                           ),
                       ),
                       flex: 2,
                     )
@@ -71,7 +76,7 @@ class _AboutScreenState extends State<AboutScreen>{
   }
 
   _launchURL() async {
-    const url = 'http://carrerapopulardelcorazon.com/';
+    var url = global.github_url;
     if (await canLaunch(url)) {
       await launch(url);
     } else {

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:vdev/app/global/app_colors.dart';
 
-Widget textLabel(text, fontSize, fontWeight) {
+Widget textLabel(text, fontSize, fontWeight, color) {
   return Text(
     text,
     style: TextStyle(
       fontFamily: 'OpenSans',
       fontSize: fontSize,
-      color: black0,
+      color: color,
       fontWeight: fontWeight,
     ),
   );
@@ -36,7 +36,7 @@ Widget categoryView(w, text, topColor, bottomColor) {
             color: bottomColor),
       ),
     ),
-    child: textLabel(text, 20.0, null),
+    child: textLabel(text, 20.0, null, black0),
   );
 }
 
@@ -44,7 +44,7 @@ Widget tabLabel(text, fontSize, fontWeight) {
   return Container(
     child: Align(
       alignment: Alignment.center,
-      child: textLabel(text, fontSize, fontWeight)
+      child: textLabel(text, fontSize, fontWeight, black0)
     ),
   );
 }

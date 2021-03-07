@@ -47,7 +47,7 @@ class _SignInScreenState extends State<SignInScreen>{
                         Expanded(
                           child: Container(
                             alignment: Alignment.centerLeft,
-                            child: textLabel('Email', 20.0, FontWeight.w700),
+                            child: textLabel('Email', 20.0, FontWeight.w700, black0),
                           ),
                           flex: 1,
                         ),
@@ -78,7 +78,7 @@ class _SignInScreenState extends State<SignInScreen>{
                         Expanded(
                           child: Container(
                             alignment: Alignment.centerLeft,
-                            child: textLabel('Password', 20.0, FontWeight.w700),
+                            child: textLabel('Password', 20.0, FontWeight.w700, black0),
                           ),
                           flex: 1,
                         ),
