@@ -21,6 +21,7 @@ class _AboutScreenState extends State<AboutScreen>{
 
   @override
   Widget build(BuildContext context) {
+    var w = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: white225,
       body: SafeArea(
@@ -35,7 +36,7 @@ class _AboutScreenState extends State<AboutScreen>{
                         alignment: Alignment.centerLeft,
                         child: textLabel(
                             'Name :',
-                            16.0,
+                            w < 420.0 ? 14.0 : 16.0,
                             FontWeight.w700,
                             black0),
                       ),
@@ -46,7 +47,7 @@ class _AboutScreenState extends State<AboutScreen>{
                         alignment: Alignment.centerLeft,
                         child: textLabel(
                             '${global.name}',
-                            16.0,
+                            w < 420.0 ? 14.0 : 16.0,
                             FontWeight.w700,
                             black0),
                       ),
@@ -64,7 +65,7 @@ class _AboutScreenState extends State<AboutScreen>{
                         alignment: Alignment.centerLeft,
                         child: textLabel(
                             'Repo URL :',
-                            16.0,
+                            w < 420.0 ? 14.0 : 16.0,
                             FontWeight.w700,
                             black0),
                       ),
@@ -76,7 +77,7 @@ class _AboutScreenState extends State<AboutScreen>{
                            child: InkWell(
                                child: textLabel(
                                    '${global.github_url}',
-                                   16.0,
+                                   w < 420.0 ? 14.0 : 16.0,
                                    FontWeight.w700,
                                    blue34),
                             onTap: _launchURL,

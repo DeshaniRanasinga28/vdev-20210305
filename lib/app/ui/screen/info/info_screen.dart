@@ -38,6 +38,7 @@ class _InfoScreenState extends State<InfoScreen>  with SingleTickerProviderState
 
   @override
   Widget build(BuildContext context) {
+    var w = MediaQuery.of(context).size.width;
     controller.animateTo(_currentTabIndex);
     return Scaffold(
       backgroundColor: white225,
@@ -77,13 +78,13 @@ class _InfoScreenState extends State<InfoScreen>  with SingleTickerProviderState
                               ),
                               tabs: <Widget>[
                                 Tab(
-                                  child: tabLabel("Project", 18.0, FontWeight.w700)
+                                  child: tabLabel("Project", w < 420.0 ? 14.0 : 18.0, FontWeight.w700)
                                 ),
                                 Tab(
-                                    child: tabLabel("Categories", 18.0, FontWeight.w700)
+                                    child: tabLabel("Categories", w < 420.0 ? 14.0 : 18.0, FontWeight.w700)
                                 ),
                                 Tab(
-                                    child: tabLabel("About", 18.0, FontWeight.w700)
+                                    child: tabLabel("About", w < 420.0 ? 14.0 : 18.0, FontWeight.w700)
                                 ),
                               ],
                             ),

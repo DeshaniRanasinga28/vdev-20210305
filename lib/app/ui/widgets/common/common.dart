@@ -36,7 +36,7 @@ Widget categoryView(w, text, topColor, bottomColor) {
             color: bottomColor),
       ),
     ),
-    child: textLabel(text, 20.0, null, black0),
+    child: textLabel(text, w < 420.0 ? 16.0 : 18.0, null, black0),
   );
 }
 

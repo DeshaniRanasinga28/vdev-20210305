@@ -9,6 +9,8 @@ class ItemProviderModel with ChangeNotifier {
   bool isLoading = true;
   Data itemData;
 
+  List<String> alphabets = [];
+
   getItemsData(context) {
     checkNetworkConnection(context).then((value) async {
       isLoading = true;
@@ -27,5 +29,4 @@ class ItemProviderModel with ChangeNotifier {
       }
     });
   }
-
 }

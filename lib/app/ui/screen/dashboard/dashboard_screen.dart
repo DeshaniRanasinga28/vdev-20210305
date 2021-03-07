@@ -25,6 +25,8 @@ class DashboardScreen extends StatefulWidget {
 class _DashboardScreenState extends State<DashboardScreen>{
   @override
   void initState() {
+    final getItemList = Provider.of<ItemProviderModel>(context, listen: false);
+    getItemList.getItemsData(context);
     super.initState();
   }
 
@@ -55,7 +57,7 @@ class _DashboardScreenState extends State<DashboardScreen>{
                             alignment: Alignment.centerRight,
                             child: textLabel(
                                 '${widget.model.email}',
-                                18.0, FontWeight.w700, black0),
+                                w < 420.0 ? 14.0 : 16.0, FontWeight.w700, black0),
                           ),
                           flex: 2,
                         ),
@@ -64,7 +66,7 @@ class _DashboardScreenState extends State<DashboardScreen>{
                             alignment: Alignment.centerRight,
                             child: CustomFlatButton(
                               title: "Sign-out",
-                              fontSize: 20,
+                              fontSize: w < 420.0 ? 16.0 : 18.0,
                               fontWeight: FontWeight.w700,
                               textColor: Colors.white,
                               onPressed: () {
@@ -88,7 +90,7 @@ class _DashboardScreenState extends State<DashboardScreen>{
                       alignment: Alignment.centerLeft,
                       child: textLabel(
                           'Product Categories',
-                          24.0,
+                          w < 420.0 ? 18.0 : 20.0,
                           FontWeight.w700, black0),
                     ),
                   ),
@@ -142,7 +144,7 @@ class _DashboardScreenState extends State<DashboardScreen>{
                   alignment: Alignment.centerLeft,
                   child: CustomFlatButton(
                     title: "info",
-                    fontSize: 20,
+                    fontSize: w < 420.0 ? 16.0 : 18.0,
                     fontWeight: FontWeight.w700,
                     textColor: Colors.white,
                     onPressed: () => Navigator.of(context).pushNamed("/infoScreen"),
@@ -162,7 +164,7 @@ class _DashboardScreenState extends State<DashboardScreen>{
                         alignment: Alignment.centerRight,
                         child: textLabel(
                             'Signed-in at:',
-                            18.0,
+                            w < 420.0 ? 12.0 : 16.0,
                             FontWeight.w700,
                             black0),
                       ),
@@ -172,7 +174,7 @@ class _DashboardScreenState extends State<DashboardScreen>{
                         alignment: Alignment.centerRight,
                         child: textLabel(
                             ' ${widget.date} ' +  ' ${widget.time}',
-                            18.0,
+                            w < 420.0 ? 12.0 : 16.0,
                             null,
                             black0),
                       ),
