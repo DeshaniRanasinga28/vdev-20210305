@@ -29,6 +29,7 @@ dependencies:
   rxdart: ^0.25.0
   toast: ^0.1.5
   connectivity: ^2.0.2
+  webview_flutter: ^1.0.7
 
 
   # The following adds the Cupertino Icons font to your application.
