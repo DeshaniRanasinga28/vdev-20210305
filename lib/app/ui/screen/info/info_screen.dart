@@ -19,6 +19,10 @@ class _InfoScreenState extends State<InfoScreen>{
       backgroundColor: white225,
       appBar: AppBar(
         backgroundColor: Colors.blueGrey[700],
+        leading: new IconButton(
+          icon: Icon(Icons.arrow_back, color: white225),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
       ),
       body: SafeArea(
           child: Column(
