@@ -125,15 +125,35 @@ Step 3 - The Xcode license agreement is signed by either opening Xcode once and 
 
 7. What are the important changes to Flutter and Dart that was announced at the Flutter Engage online conference on 2021 March?
 
- **- Flutter on the web**
-   
-   Flutter 2 is production-quality support for the web. This initial release focuses on three app scenarios in particular:
-   
-   - **Progressive web apps (PWAs)** that combine the web’s reach with the capabilities of a desktop app.
-    
-   - **Single page apps (SPAs) that** load once and transmit data to and from internet services.
-    
-   - **Bringing existing Flutter mobile apps to the web**, enabling shared code for both experiences.
+**- Flutter web available in stable version.**
+
+**- Google Pay rewrote in flutter for productivity gains.**
+
+**- iRobot building Multiplatform with Flutter.**
+
+**- Available the stable version for macOS, Windows and Linux.**
+
+**- Microsoft contributing foldable support to Flutter.**
+
+**- Sound null safety is fully supported in stable as of Flutter 2.**
+
+**- The growing Flutter ecosystem.**
+
+**- Upgraded Firebase plugins for Flutter.**
+
+**- Announce that Flutter’s desktop support is available in the stable channel under an early release flag.**
+
+**- Announce an open beta for Google Mobile Ads SDK for Flutter.**
+
+**- Few iOS widgets have been added to the Cupertino design language implementation.**
+
+**- Flutter Introduce the two additional new widgets, AutocompleteCore and ScaffoldMessenger.**
+
+**- Toyota infotainment system powered by Flutter.**
+
+**- Multiple Flutter instances with Add-to-App.**
+
+
    
 
 
