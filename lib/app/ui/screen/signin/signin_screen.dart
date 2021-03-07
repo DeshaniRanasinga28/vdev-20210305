@@ -10,6 +10,10 @@ import 'package:validators/validators.dart' as validator;
 import 'package:vdev/app/ui/screen/dashboard/dashboard_screen.dart';
 
 class SignInScreen extends StatefulWidget{
+  bool visible;
+
+  SignInScreen({this.visible});
+
   @override
   State<StatefulWidget> createState() {
     return _SignInScreenState();
@@ -24,11 +28,16 @@ class _SignInScreenState extends State<SignInScreen>{
   Color _checkedColor = Colors.blueGrey[700];
 
   var now = DateTime.now();
-  // var format = DateFormat('MM-d');
-  // var displayFormatDate = DateFormat('dd-MM-yyyy');
+  bool msg;
+  @override
+  void initState() {
+    super.initState();
+    msg = widget.visible;
+  }
 
   @override
   Widget build(BuildContext context) {
+    var w = MediaQuery.of(context).size.width;
     return Scaffold(
         backgroundColor: white225,
         appBar: AppBar(
@@ -38,7 +47,7 @@ class _SignInScreenState extends State<SignInScreen>{
         body: SafeArea(
           child: Form(
             key: _formKey,
-              child: Column(
+              child: ListView(
                 children: [
                   Padding(
                     padding: EdgeInsets.fromLTRB(20, 60, 20, 20),
@@ -160,6 +169,30 @@ class _SignInScreenState extends State<SignInScreen>{
                       ],
                     ),
                   ),
+                  Visibility(
+                      child: Padding(
+                          padding: EdgeInsets.fromLTRB(20, 40, 20, 20),
+                          child: Container(
+                            width: w,
+                              height: 20.0,
+                              alignment: Alignment.center,
+                              child: textLabel('Invalid email or password', 20.0, FontWeight.w700, red)),
+                      ),
+                    visible: msg != null ?  true : false,
+                  ),
+                  Visibility(
+                      child: Padding(
+                          padding: EdgeInsets.fromLTRB(20, 0, 20, 20),
+                          child: Container(
+                              width: w,
+                              height: 80.0,
+                              alignment: Alignment.center,
+                              child: textLabel('Email: joe@black.lk  Password: Jo45*78'
+                                  '\nEmail: amal@acme.lk  Password: La79*!_io'
+                                  '\nEmail: peter@pan.lk  Password: Nap42-24', 16.0, null, red)),
+                      ),
+                    visible: msg != null ?  true : false,
+                  ),
                 ],
               )
           )
@@ -180,7 +213,10 @@ class _SignInScreenState extends State<SignInScreen>{
             MaterialPageRoute(
                 builder: (context) => DashboardScreen(model: this.model, date: date, time: time)));
       }else{
-        Navigator.of(context).pushNamed("/signInScreen"); 
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => SignInScreen(visible: true)));
       }
 
     });
