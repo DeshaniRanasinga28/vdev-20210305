@@ -154,6 +154,21 @@ Step 3 - The Xcode license agreement is signed by either opening Xcode once and 
 **- Multiple Flutter instances with Add-to-App.**
 
 
+8. In your own words, briefly describe how Flutter works.
+
+The Flutter architecture has consisted of 3 layers. 
+
+1. Platform
+2. Engine
+3. Framework
+
+Flutter application is consistent with the Widgets. Those are rendered onto a Skia canvas and sent to the platform. The platform shows the canvas and sends events back as required. Flutter application is compiled and run on the native platform.
+
+Flutter provides a Shell, that hosts the Dart VM. The Shell is platform-specific and giving access to the native platform APIs and hosting the establishing the platform relevant canvas. Also, help provide communication to the relevant IMEs and the systems application lifecycle events. There is also an embedder API. if you want to use Flutter like a library, instead of hosting running an app. 
+
+
+
+
    
 
 
