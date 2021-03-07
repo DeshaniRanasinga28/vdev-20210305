@@ -31,7 +31,7 @@ class Vdev extends StatelessWidget {
         theme: ThemeData(
           // fontFamily: 'OpenSans',
           primaryColor: Colors.white,
-          primarySwatch: Colors.grey,
+          primarySwatch: Colors.teal,
         ),
         home: SplashScreen(),
       ),

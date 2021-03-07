@@ -138,10 +138,7 @@ class _SignInScreenState extends State<SignInScreen>{
                                     print("Date:-->${formatDate.toString()}");
                                     print("Time:-->${formatTime.toString()}");
 
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => DashboardScreen(model: this.model, date: formatDate, time: formatTime,)));
+                                    _signIn(context, formatDate, formatTime);
 
                                   }else{
                                     setState(() {
@@ -170,20 +167,43 @@ class _SignInScreenState extends State<SignInScreen>{
     );
   }
 
-  // void showPermissionPopup() async {
-  //   showDialog(
-  //     context: context,
-  //     builder: (
-  //         BuildContext context) {
-  //       return AlertDialog(
-  //         shape: RoundedRectangleBorder(
-  //           borderRadius: BorderRadius.circular(10.0),
-  //         ),
-  //         title: Text('title'),
-  //         content: Text('content'),
-  //       );
-  //     },
-  //   );
-  // }
+  _signIn(context, date, time){
+    showPermissionPopup();
+    print("email:---->${model.email.toString()}");
+
+    Future.delayed(Duration(seconds: 3), () {
+      if(model.email == 'joe@black.lk' &&  model.password == 'Jo45*78' ||
+          model.email == 'amal@acme.lk' &&  model.password == 'La79*!_io' ||
+          model.email == 'peter@pan.lk' &&  model.password == 'Nap42-24'){
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => DashboardScreen(model: this.model, date: date, time: time)));
+      }else{
+        Navigator.of(context).pushNamed("/signInScreen"); 
+      }
+
+    });
+  }
+
+  void showPermissionPopup() async {
+    showDialog(
+      barrierDismissible: false,
+      context: context,
+      builder: (
+          BuildContext context) {
+        return AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+          content: Container(
+            height: 120.0,
+            alignment: Alignment.center,
+            child: Text('Please wait\nWhile we sign\nyou in...'),
+          ),
+        );
+      },
+    );
+  }
 
 }

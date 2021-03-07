@@ -53,9 +53,10 @@ class _CategoryScreenState extends State<CategoryScreen>{
                         }
                     ))
             )
-                : Container(
+                : Expanded(
+                child: Container(
                 child: Center(
-                    child: CircularProgressIndicator()))
+                    child: CircularProgressIndicator())))
           ],
         ),
       ),

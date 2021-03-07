@@ -72,9 +72,6 @@ class _DashboardScreenState extends State<DashboardScreen>{
                               textColor: Colors.white,
                               onPressed: () {
                                 _siginOut(context);
-                                // Toast.show('Sign out', context, duration: Toast.LENGTH_SHORT, gravity: Toast.BOTTOM);
-                                // global.tabIndex = null;
-                                // Navigator.of(context).pushNamed("/signInScreen");
                               },
                               color: Colors.blueGrey[700],
                               splashColor: Colors.black12,
@@ -114,9 +111,11 @@ class _DashboardScreenState extends State<DashboardScreen>{
                               }
                           ))
                   )
-                      : Container(
+                      : Expanded(
+                      child: Container(
                       child: Center(
                           child: CircularProgressIndicator()))
+                  )
 
                 ],
               )
