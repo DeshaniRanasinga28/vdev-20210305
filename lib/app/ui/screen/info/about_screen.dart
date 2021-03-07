@@ -15,6 +15,13 @@ class AboutScreen extends StatefulWidget {
 class _AboutScreenState extends State<AboutScreen>{
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    global.tabIndex = 3;
+  }
+
+  @override
   Widget build(BuildContext context) {
     var w = MediaQuery.of(context).size.width;
 

@@ -24,6 +24,9 @@ class _ProjectScreenState extends State<ProjectScreen>{
     super.initState();
     // Enable hybrid composition.
     if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
+
+    global.tabIndex = 1;
+
   }
 
   @override

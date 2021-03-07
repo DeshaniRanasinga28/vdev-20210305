@@ -4,6 +4,7 @@ import 'package:vdev/app/global/app_colors.dart';
 import 'package:vdev/app/model/category.dart';
 import 'package:vdev/app/provider/item_provider.dart';
 import 'package:vdev/app/ui/widgets/common/common.dart';
+import 'package:vdev/app/global/global.dart' as global;
 
 class CategoryScreen extends StatefulWidget {
 
@@ -20,6 +21,8 @@ class _CategoryScreenState extends State<CategoryScreen>{
     final getItemList = Provider.of<ItemProviderModel>(context, listen: false);
     getItemList.getItemsData(context);
     super.initState();
+
+    global.tabIndex = 2;
   }
 
   @override

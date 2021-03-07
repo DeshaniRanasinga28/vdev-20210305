@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
+import 'package:toast/toast.dart';
 import 'package:vdev/app/global/app_colors.dart';
 import 'package:vdev/app/model/category.dart';
 import 'package:vdev/app/model/model.dart';
 import 'package:vdev/app/provider/item_provider.dart';
 import 'package:vdev/app/ui/widgets/common/common.dart';
 import 'package:vdev/app/ui/widgets/custom_flat_button.dart';
+import 'package:vdev/app/global/global.dart' as global;
 
 class DashboardScreen extends StatefulWidget {
   Model model;
@@ -68,7 +70,12 @@ class _DashboardScreenState extends State<DashboardScreen>{
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
                               textColor: Colors.white,
-                              onPressed: () => Navigator.of(context).pushNamed("/signInScreen"),
+                              onPressed: () {
+                                _siginOut(context);
+                                // Toast.show('Sign out', context, duration: Toast.LENGTH_SHORT, gravity: Toast.BOTTOM);
+                                // global.tabIndex = null;
+                                // Navigator.of(context).pushNamed("/signInScreen");
+                              },
                               color: Colors.blueGrey[700],
                               splashColor: Colors.black12,
                               borderColor: Colors.black,
@@ -163,6 +170,13 @@ class _DashboardScreenState extends State<DashboardScreen>{
       ),
     );
   }
+
+  _siginOut(context){
+    Toast.show('Sign out', context, duration: Toast.LENGTH_SHORT, gravity: Toast.BOTTOM);
+    global.tabIndex = null;
+    Navigator.of(context).pushNamed("/signInScreen");
+  }
+
 
 
 }

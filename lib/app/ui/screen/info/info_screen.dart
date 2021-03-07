@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:vdev/app/global/app_colors.dart';
 import 'package:vdev/app/ui/widgets/common/common.dart';
 import 'project_screen.dart' as projetcScreen;
-
 import 'about_screen.dart' as aboutScreen;
 import 'category_screen.dart' as categoryScreen;
+import 'package:vdev/app/global/global.dart' as global;
 
 class InfoScreen extends StatefulWidget {
 
@@ -25,13 +25,23 @@ class _InfoScreenState extends State<InfoScreen>  with SingleTickerProviderState
     controller = new TabController(length: 3, vsync: this, initialIndex: 0);
     super.initState();
 
+    setState(() {
+      if (global.tabIndex == 1) {
+        _currentTabIndex = 0;
+      } else if (global.tabIndex == 2){
+        _currentTabIndex = 1;
+      }else if (global.tabIndex == 3){
+        _currentTabIndex = 2;
+      }else{
+        _currentTabIndex = 0;
+      }
+    });
+
   }
 
   @override
   Widget build(BuildContext context) {
-    var h = MediaQuery.of(context).size.height;
-    var w = MediaQuery.of(context).size.width;
-
+    controller.animateTo(_currentTabIndex);
     return Scaffold(
       backgroundColor: white225,
       appBar: AppBar(
