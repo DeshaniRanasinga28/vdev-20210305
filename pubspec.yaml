@@ -26,7 +26,7 @@ dependencies:
   validators: ^2.0.0+1
   intl: ^0.16.0
   provider: ^4.3.3
-  rxdart: ^0.25.0
+#  rxdart: ^0.25.0
   toast: ^0.1.5
   connectivity: ^2.0.2
   webview_flutter: ^1.0.7

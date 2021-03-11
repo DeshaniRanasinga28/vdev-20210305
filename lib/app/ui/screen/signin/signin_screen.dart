@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:vdev/app/global/app_colors.dart';
 import 'package:vdev/app/global/global.dart';
 import 'package:vdev/app/model/model.dart';
@@ -71,6 +70,7 @@ class _SignInScreenState extends State<SignInScreen>{
                                 return null;
                               },
                               onChanged: (String value) {
+                                model.email = value;
                                 model.email = value;
                               },
                             ),
