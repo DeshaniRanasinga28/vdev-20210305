@@ -154,7 +154,7 @@ Step 3 - The Xcode license agreement is signed by either opening Xcode once and 
 **- Multiple Flutter instances with Add-to-App.**
 
 
-8. In your own words, briefly describe how Flutter works.
+# Flutter architecture
 
 The Flutter architecture has consisted of 3 layers. 
 
